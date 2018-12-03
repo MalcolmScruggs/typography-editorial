@@ -1,3 +1,6 @@
+Credit for images and source material: 
+https://www.washingtonpost.com/sf/national/2016/07/23/numb/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
