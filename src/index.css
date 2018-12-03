@@ -12,3 +12,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.cover-img {
+  background-image: url("./img/amanda-couch.jpg");
+  background-size: 100%;
+  background-attachment: scroll;
+  padding: 25%;
+  padding-top: 29%;
+  background-repeat: no-repeat;
+}
+
+.cover-container {
+  position: relative;
+}
+
+.cover-overlay {
+  z-index: 3;
+  position: absolute;
+  color: #fff;
+  bottom: 16%;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+.title-blurb {
+  text-align: center;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  line-height: 1.8em;
+  margin: 1.4em 0;
+  font-size: 1rem;
+}
