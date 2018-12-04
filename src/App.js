@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Parallax, Background } from "react-parallax";
 import './App.css';
 import amanda_smoking from './img/amanda-smoking.jpg';
 import amanda_southwest_detroit from './img/amanda-southwest-detroit.jpg';
