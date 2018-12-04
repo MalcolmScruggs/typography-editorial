@@ -9,8 +9,7 @@ import libby_bracelet from "./img/amanda-liby-bracelet.jpg";
 
 class App extends Component {
   render() {
-      //TODO fontsize button
-      let bodyCol = "col-sm-10 offset-sm-1 col-lg-6 offset-lg-2 pr-3";
+    let bodyCol = "col-sm-10 offset-sm-1 col-lg-6 offset-lg-2 pr-3";
     return (
       <div className="App">
           <div className="cover-container">
