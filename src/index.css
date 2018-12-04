@@ -59,6 +59,7 @@ code {
 .title {
   text-align: center;
   font-weight: 900;
+  font-size: 4.5rem;
 }
 
 .title-blurb {
@@ -145,7 +146,6 @@ aside {
     margin: 1rem auto;
     display: block;
     float: none;
-    /*padding: 0 1rem;*/
     width: 100%;
     text-align: left;
   }
@@ -159,15 +159,15 @@ aside {
   .title {
     color: #212529;
     text-align: left;
-    font-weight: 700;
-    padding: 1.6rem 0 0 0;
-    font-size: 30px;
+    font-weight: 500;
+    padding: 1.6rem 0 .7rem 0;
+    font-size: 2rem;
   }
 
   .title-blurb {
-    padding: 0;
+    padding: 0 0 2rem 0;
     text-align: left;
     color: #212529;
-    font-size: 18px;
+    font-size: 1rem;
   }
 }
