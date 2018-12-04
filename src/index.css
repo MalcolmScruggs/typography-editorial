@@ -137,7 +137,7 @@ aside {
   clear: left;
   background: #fff;
   margin: 35px 35px 35px -85px;
-  text-align: right;
+  text-align: left;
 }
 
 @media (max-width: 576px) {
