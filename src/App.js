@@ -19,7 +19,6 @@ class App extends Component {
                   <h4 className="title-blurb">A story of truth, lies and an American addiction</h4>
               </div>
           </div>
-
           <section className="article-body px-4 px-sm-0" >
               <div className="row no-gutters">
                   <div className={`${bodyCol}`}>
@@ -200,6 +199,9 @@ class App extends Component {
                           <div className="text-muted light-font pb-1">Photos by <strong className="text-primary bold-font">Bonnie Jo Mount</strong></div>
                           <div className="text-muted light-font pb-1"><small>Published on July 23, 2016</small></div>
                       </div>
+                      <div className="disclaimer supplement-text mt-3 pt-1">
+                          <div className="small text-muted">This is a page created for educational purposes. All content from <a className="text-muted" href="https://www.washingtonpost.com/">The Washington Post.</a></div>
+                      </div>
                   </div>
               </div>
           </section>
@@ -221,7 +223,7 @@ function Supplement(props) {
 }
 
 function BodyPicture(props) {
-    return <div className="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 mb-5 pt-2 divider">
+    return <div className="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 mb-5 pt-2 divider px-0">
         <div>
             <img className="img-responsive" src={props.img} />
         </div>
