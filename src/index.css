@@ -1,16 +1,34 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Merriweather', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  orphans: 3;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.text-primary {
+  color: #715500 !important;
+}
+
+.light-font {
+  font-weight: 300;
+}
+
+.bold-font {
+  font-weight: 700;
+}
+
+.black-font {
+  font-weight: 900;
 }
 
 .cover-img {
@@ -34,17 +52,122 @@ code {
   width: 100%;
 }
 
+.credit-container {
+  border-top: 2px solid #715500;
+}
+
 .title {
   text-align: center;
+  font-weight: 900;
 }
 
 .title-blurb {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
 }
 
-p {
-  font-family: 'Merriweather', serif;
+.article-body {
   line-height: 1.8em;
   margin: 1.4em 0;
   font-size: 1rem;
+}
+
+.dropcap::first-letter {
+  font-size: 600%;
+  float: left;
+  margin-top: .3em;
+  margin-bottom: .1em;
+  padding-right: 5px;
+  color: #715500;
+}
+
+.pullquote {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2em;
+  padding: 25px 0 20px;
+  border-top: 10px solid #715500;
+  border-bottom: 1px solid #715500;
+  color: #715500;
+  margin: 40px 0;
+  hanging-punctuation: first;
+}
+
+.caption {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.supplement-text {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.callout-title {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .callout {
+    margin-left: 0;
+  }
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.divider {
+  border-bottom: 2px solid #715500;
+}
+
+aside {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  overflow: hidden;
+  width: 242px;
+  float: left;
+  clear: left;
+  background: #fff;
+  margin: 35px 35px 35px -85px;
+  text-align: right;
+}
+
+@media (max-width: 576px) {
+  aside {
+    box-sizing: border-box;
+    margin: 1rem auto;
+    display: block;
+    float: none;
+    /*padding: 0 1rem;*/
+    width: 100%;
+    text-align: left;
+  }
+
+  .cover-overlay {
+    position: relative;
+    padding-left: 1.4rem !important;
+    padding-right: 1.4rem !important;
+  }
+
+  .title {
+    color: #212529;
+    text-align: left;
+    font-weight: 700;
+    padding: 1.6rem 0 0 0;
+    font-size: 30px;
+  }
+
+  .title-blurb {
+    padding: 0;
+    text-align: left;
+    color: #212529;
+    font-size: 18px;
+  }
 }

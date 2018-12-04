@@ -2,22 +2,31 @@ import React, { Component } from 'react';
 import { Parallax, Background } from "react-parallax";
 import './App.css';
 import amanda_couch from './img/amanda-couch.jpg';
+import amanda_smoking from './img/amanda-smoking.jpg';
+import amanda_southwest_detroit from './img/amanda-southwest-detroit.jpg';
+import amanda_freeway from './img/amanda-freeway.jpg';
+import amanda_dentist from './img/amanda-dentist2.jpg';
+import libby_bracelet from "./img/amanda-liby-bracelet.jpg";
 
 class App extends Component {
   render() {
+      //TODO fontsize button
+      let bodyCol = "col-sm-10 offset-sm-1 col-lg-6 offset-lg-2 pr-3";
     return (
       <div className="App">
           <div className="cover-container">
               <div className="cover-img"></div>
               <div className="cover-overlay">
-                  <h1 className="title">"How's Amanda?"</h1>
-                  <h2 className="title-blurb">A story of truth, lies and an American addiction</h2>
+                  <h1 className="title">“How’s Amanda?”</h1>
+                  <h4 className="title-blurb">A story of truth, lies and an American addiction</h4>
               </div>
           </div>
-          <section>
+
+          <section className="article-body px-4 px-sm-0">
               <div className="row no-gutters">
-                  <div className="col-sm-8 offset-sm-2 col-lg-6">
-                      <p>She had already made it through one last night alone under the freeway bridge, through the vomiting and shakes of withdrawal, through cravings so intense she’d scraped a bathroom floor searching for leftover traces of heroin. It had now been 12 days since the last time Amanda Wendler used a drug of any kind, her longest stretch in years. “Clear-eyed and sober,” read a report from one drug counselor, and so Amanda, 31, had moved back in with her mother to begin the stage of recovery she feared most.</p>
+                  <div className={`${bodyCol}`}>
+                      <p className="text-right"><strong>FARMINGTON HILLS, Mich.</strong></p>
+                      <p className="dropcap">She had already made it through one last night alone under the freeway bridge, through the vomiting and shakes of withdrawal, through cravings so intense she’d scraped a bathroom floor searching for leftover traces of heroin. It had now been 12 days since the last time Amanda Wendler used a drug of any kind, her longest stretch in years. “Clear-eyed and sober,” read a report from one drug counselor, and so Amanda, 31, had moved back in with her mother to begin the stage of recovery she feared most.</p>
                       <p>“Is this everything I have?” she asked, standing with her mother in the garage of their two-bedroom condominium, taking inventory of her things. There were a few garbage bags filled with clothes. There was a banged-up dresser she had put into storage before moving into her first abandoned house.</p>
                       <p>“Where’s my good makeup?” Amanda asked.</p>
                       <p>“Maybe you pawned it with the jewelry,” said her mother, Libby Alexander.</p>
@@ -25,6 +34,8 @@ class App extends Component {
                       <p>“Oh, God. Are you serious?” Libby said. “Do you even know how many pairs of shoes you’ve lost or sold?”</p>
                       <p>Amanda lit a cigarette and sat in a plastic chair wedged between the cat food and the recycling bins in the garage, the only place where she was allowed to smoke. This was the ninth time she had managed to go at least a week without using. She had spent a full decade trying and failing to get clean, and a therapist had asked her once to make a list of her triggers for relapse. “Boredom, loneliness, anxiety, regret, shame, seeing how I haven’t gone up at all in my life when the drugs aren’t there,” she had written.</p>
                       <p>She had no job, no high school diploma, no car and no money beyond what her mother gave her for Mountain Dew and cigarettes. A few days earlier, a dentist had pulled all 28 of her teeth, which had decayed from years of neglect. It had been a week since she’d seen her 9-year-old twin sons, who lived in a nearby suburb with their father, and lately the most frequent text messages coming into her phone were from a dealer hoping to lure her back with free samples: “Got testers,” he had just written. “Get at me. They’re going fast.”</p>
+                      <Supplement title="Opioid Overdose Crisis"
+                          text="Every day, more than 115 people in the United States die after overdosing on opioids. The misuse of and addiction to opioids—including prescription pain relievers, heroin, and synthetic opioids such as fentanyl—is a serious national crisis that affects public health as well as social and economic welfare. The Centers for Disease Control and Prevention estimates that the total “economic burden” of prescription opioid misuse alone in the United States is $78.5 billion a year, including the costs of healthcare, lost productivity, addiction treatment, and criminal justice involvement."/>
                       <p>In the addicted America of 2016, there are so many ways to take measure of the pain, longing and despair that are said to be driving a historic opiate epidemic: Another 350 people starting on heroin every day, according to estimates from the Centers for Disease Control and Prevention; another 4,105 emergency-room visits; another 79 people dead. Drug overdoses are now the leading cause of injury-related death in the United States — worse than guns, car crashes or suicides. Heroin abuse has quadrupled in the past decade. Most addicts are introduced to heroin through prescription pain pills, and doctors now write more than 200 million opiate prescriptions each year.</p>
                       <p>But the fact that matters most for a chronic user is what it takes for just one addict to get clean. The relapse rate for heroin has been reported in various studies to be as high as 97 percent. The average active user dies of an overdose in about 10 years, and Amanda’s opiate addiction was going on year 11.</p>
                       <p>She believed her only chance to stay sober was to take away the possibility of feeling high, so she had decided to pursue one of the newest treatments for heroin. It was a monthly shot of a drug called naltrexone, which blocks the effects of opiates on the brain and makes getting high impossible. But the shot came with dangerous side effects if she still had opiates in her system. Doctors had told her that first she needed to pass a drug test, which required staying clean for at least two weeks, which meant her appointment for the shot was still four days away.</p>
@@ -36,14 +47,18 @@ class App extends Component {
                       <p>“I’m sorry,” Libby said. “It’s our reality.”</p>
                       <p>“Yeah, I know,” Amanda said. “And reality’s a trigger.”</p>
                   </div>
+                  <BodyPicture img={amanda_smoking} caption="Libby Alexander, left, gives daughter Amanda money for food, sodas and cigarettes. With no job, no high school diploma and no car, she has no money beyond that. In weak moments, Amanda has pawned her belongings." />
                   <div className="row no-gutters">
-                      <div className="col-sm-8 offset-sm-2 col-lg-6">
-                          <p>Their condo was tucked away in a small development surrounded by pine trees and occupied mostly by retirees: no loud noises, no solicitors, no unauthorized visitors allowed beyond the guard shack after 8 p.m. Libby was usually in the living room with the TV on mute. Amanda’s stepfather was in the study, playing chess online. It was a place so quiet that Amanda could sit in the garage and literally hear the clock tick. Seventy-two hours left until the shot. Seventy-one. Seventy.</p>
+                      <div className={`${bodyCol}`}>
+                          <p className="dropcap">Their condo was tucked away in a small development surrounded by pine trees and occupied mostly by retirees: no loud noises, no solicitors, no unauthorized visitors allowed beyond the guard shack after 8 p.m. Libby was usually in the living room with the TV on mute. Amanda’s stepfather was in the study, playing chess online. It was a place so quiet that Amanda could sit in the garage and literally hear the clock tick. Seventy-two hours left until the shot. Seventy-one. Seventy.</p>
                           <p>“No way I’m going to make it,” she said. She was sweating and picking at her nail beds, and when she said that she might know of a few clinics where she could get the shot right away, Libby agreed to drive her.</p>
                           <p>They drove out of the exurbs, through the suburbs and into the city. Libby tucked her purse against the driver’s side door, where Amanda wouldn’t be able to reach it. She relocked the doors as she drove and cupped her hands over the car keys, remembering a time when Amanda had grabbed her keys and refused to give them back unless Libby paid her. For most of the last week, she had been requesting time off from her job as a beautician, afraid of what could happen if she left Amanda alone.</p>
+                          <Supplement title="How did this happen?"
+                                      text="In the late 1990s, pharmaceutical companies reassured the medical community that patients would not become addicted to prescription opioid pain relievers, and healthcare providers began to prescribe them at greater rates. This subsequently led to widespread diversion and misuse of these medications before it became clear that these medications could indeed be highly addictive. Opioid overdose rates began to increase. In 2015, more than 33,000 Americans died as a result of an opioid overdose, including prescription opioids, heroin, and illicitly manufactured fentanyl, a powerful synthetic opioid. That same year, an estimated 2 million people in the United States suffered from substance use disorders related to prescription opioid pain relievers, and 591,000 suffered from a heroin use disorder (not mutually exclusive)."/>
                           <p>Amanda sat in the passenger seat and stared out the window as they came into Southwest Detroit, passing the overgrown lots and decaying houses where she had spent so much of her adult life. Her first opiates had been a prescription for 120 tablets of Vicodin, offered by a doctor to treat a minor snowmobiling injury in high school. The pills chased away that pain and also the anger left over from her parents’ divorce, her depression, ADHD and self-doubt, and soon she was failing out of high school and becoming increasingly dependent on pills. Just one or two to make it through another shift at work, a pawnshop where she stood behind the counter and gave addicts their $25 loans. Just two more to pass the time spent alone watching TV while her husband, a truck driver, was traveling. Just three or four to get going with the twins in the morning, to feed them, to sing to them, to feed them again, to sit and play all day in a lonely trailer out in Macomb. Just five when it started to feel like she was suffocating, 24 years old, divorced and already so stuck. Just a dose every five or six hours throughout the day to quiet the noise in her head, so why wasn’t she numb? Why was 15 pills each day still not enough? If only there was something cheaper, stronger, and so in 2012 a boyfriend had introduced her to heroin, and she had been injecting it into a vein in her forearm twice a day ever since.</p>
                           <p>Now they drove past the boarded-up trap houses where she’d met dealers and learned how to buy a $10 bag, until her tolerance grew and she needed five or six bags each day. They continued past the corner where she’d panhandled; and the blocks of abandoned houses where she’d learned how to strip out copper wire and sell it for scrap; and the motel where she’d worked from 4 a.m. to 4 p.m., shooting up before and after each shift, the only housekeeper in a 31-room motel where the rooms were rented in three-hour blocks and the best tips were drugs left behind by customers.</p>
                           <p>They continued past a decaying apartment tower and then a small Victorian with busted windows. It reminded Amanda of a vacant house where she’d squatted for a while with a dozen other users, a rat-infested place without heat or electricity. She’d tried to make it feel like home, scrubbing the floors with Pine-Sol and hanging a poinsettia wreath on the boarded-up bedroom door. She’d met a girl there who had become like a little sister — a young runaway from Tennessee who was always using too much at once and risking an overdose.</p>
+                          <div className="pullquote">“Days are forever. Do you even know how hard it is to go for one&nbsp;minute?”</div>
                           <p>“I want to go find Sammy,” Amanda said now, turning to her mother.</p>
                           <p>“What? Who’s that?” Libby said. “What about finding a clinic?”</p>
                           <p>“This is more important,” Amanda said, and so she began to explain how Sammy reminded her of herself, and how they had looked out for each other in the abandoned house. “If she sees I’m doing good, maybe I can convince her to go into rehab.”</p>
@@ -70,11 +85,14 @@ class App extends Component {
                           <p>“Okay,” Libby said. “Let’s get the hell out of here.”</p>
                       </div>
                   </div>
+                  <BodyPicture img={amanda_freeway} caption="Amanda speaks with Jay, a 20-year heroin user who lives under the Detroit bridge where she once spent a couple fearful nights. Amanda's opiate addiction is stretching into its 11th year, and she struggles to stay clean." />
                   <div className="row no-gutters">
-                      <div className="col-sm-8 offset-sm-2 col-lg-6">
-                          <p>She had been an admitted opiate addict for 11 years, five months and 14 days, and on almost every one of those days she had promised to quit. She had tried therapy and group counseling, inpatient and outpatient. She’d run up thousands of dollars in credit-card debt to pay for a wellness retreat in the woods, and she’d slept on a cot in the hallway of a Medicaid addiction center. She had tried flushing away her supply; and erasing every number in her phone so she couldn’t contact dealers; and waiting again on the long list to get into the city’s free medical detox; and showing up at the hospital psych ward to say that she was suicidal. She’d searched for God at 12-step meetings and instead found new dealers. She’d tried methadone and Suboxone, two synthetic opiates used to treat heroin addiction, but instead wound up abusing those synthetics to get high.</p>
+                      <div className={`${bodyCol}`}>
+                          <p className="dropcap">She had been an admitted opiate addict for 11 years, five months and 14 days, and on almost every one of those days she had promised to quit. She had tried therapy and group counseling, inpatient and outpatient. She’d run up thousands of dollars in credit-card debt to pay for a wellness retreat in the woods, and she’d slept on a cot in the hallway of a Medicaid addiction center. She had tried flushing away her supply; and erasing every number in her phone so she couldn’t contact dealers; and waiting again on the long list to get into the city’s free medical detox; and showing up at the hospital psych ward to say that she was suicidal. She’d searched for God at 12-step meetings and instead found new dealers. She’d tried methadone and Suboxone, two synthetic opiates used to treat heroin addiction, but instead wound up abusing those synthetics to get high.</p>
                           <p>She had even tried an earlier version of the naltrexone shot a few years back, and it had helped her stay clean for five months until she relapsed. Maybe this time it would last. Nineteen hours now until her appointment. She lit a cigarette and sat down in the garage. The air was still and the neighborhood was quiet. A group of retired women walked by in visors and spandex, making their usual morning loop.</p>
                           <p>She had been warned by a doctor that it was normal in the first year of sobriety to feel “bored, flat, depressed, blah, tired, anxious” — a change in brain chemistry that exacerbated so many of the longings that made heroin appealing in the first place. “I’m not seeing what’s so great about being clean,” Amanda already had told her mother once, and in an effort to feel better she had started thinking back to a time when she was 19, hopeful and sober.</p>
+                          <Supplement title="What is known of the crisis?"
+                                      text="Roughly 21 to 29 percent of patients prescribed opioids for chronic pain misuse them. Between 8 and 12 percent develop an opioid use disorder. Between 8 and 12 percent develop an opioid use disorder. This issue has become a public health crisis with devastating consequences including increases in opioid misuse and related overdoses, as well as the rising incidence of neonatal abstinence syndrome due to opioid use and misuse during pregnancy. The increase in injection drug use has also contributed to the spread of infectious diseases including HIV and hepatitis C. As seen throughout the history of medicine, science can be an important part of the solution in resolving such a public health crisis." />
                           <p>For most of that year she had traveled with her husband as he drove long-haul loads. They had made it to 48 states without ever planning beyond the next week. Maybe they would stay for a while in Texas. Maybe they would move up to the Rocky Mountains in Colorado. All that sky. So many possibilities. And then eventually the job had gone away and the road had led them back to Michigan — to the trailer, to the pawnshop, to the pills, to the twins, to a dissolving marriage and a courtroom dispute for custody, and it felt to Amanda like she’d been fighting to hang on ever since.</p>
                           <p>The walkers circled past the garage on another loop. Amanda stomped out her cigarette and headed inside.</p>
                           <p>“Seventeen hours,” her mother said, greeting her.</p>
@@ -101,9 +119,12 @@ class App extends Component {
                           <p>“You’re the one freaking out,” Amanda said. “What about you?”</p>
                       </div>
                   </div>
+                  <BodyPicture img={amanda_southwest_detroit} caption="Libby and Amanda look at urban sculpture in Detroit. Southwest Detroit had been Amanda's go-to neighborhood for heroin." />
                   <div className="row no-gutters">
-                      <div className="col-sm-8 offset-sm-2 col-lg-6">
-                          <p>Four days left to go, three days, two, and as the hours crawled by until the appointment Libby decided she needed to leave the house. She asked her husband to keep an eye on Amanda and went to have dinner with two of the women she’d met in the Facebook group for addicts’ mothers.</p>
+                      <div className={`${bodyCol}`}>
+                          <p className="dropcap">Four days left to go, three days, two, and as the hours crawled by until the appointment Libby decided she needed to leave the house. She asked her husband to keep an eye on Amanda and went to have dinner with two of the women she’d met in the Facebook group for addicts’ mothers.</p>
+                          <Supplement title="What is the HHS doing about it?"
+                                      text="In response to the opioid crisis, the U.S. Department of Health and Human Services (HHS) is focusing its efforts on five major priorities: improving access to treatment and recovery services, promoting use of overdose-reversing drugs, strengthening our understanding of the epidemic through better public health surveillance, providing support for cutting-edge research on pain and addiction, and advancing better for pain management" />
                           <p>For nearly a decade, Libby had avoided talking to anyone about her daughter’s addiction, mostly because Amanda didn’t want people to know. “How’s Amanda doing?” friends and relatives would ask, at every graduation, wedding and baby shower, and what was Libby supposed to tell them? That while everyone else’s life was marching along in neat succession, her daughter was still sleeping late in the basement? That she was giving Amanda an allowance for cigarettes and cleaning up her moldy cereal bowls? “She’s just fine,” was what Libby had always said, until eventually people stopped asking, which felt even worse. So Libby had started spending more time at home, and then more time on Facebook, where she had connected with a group of local addicts’ mothers who had become her closest friends.</p>
                           <p>“How’s Amanda?” asked one of them, Mary Carr, as they sat down at a restaurant and ordered drinks.</p>
                           <p>“Who knows?” Libby said. “Clean? Using? You’d think by now I could figure it out, but I honestly have no idea.”</p>
@@ -114,7 +135,14 @@ class App extends Component {
                           <p>“See, that’s the part I’m no good at,” Libby said. “I can’t let go. I always think I can save her.”</p>
                           <p>Libby had only been a mother for three months the first time Amanda got sick. Doctors had told her it was just a stubborn cold, until one night Libby went to check on her infant daughter and found her wheezing in the crib. The baby was turning blue. She couldn’t breathe. Libby picked her up, blew air into her mouth and rushed her to the emergency room. They stayed in the neonatal unit for the next two months as doctors ran tests to see what was wrong. Finally Amanda had been diagnosed with a severe kind of asthma, treated and sent home, and for the next year Libby had stood over her crib for a little while each night watching her breathe.</p>
                           <p>Now she had spent 11 more years trapped in that cycle — expecting her daughter to die, sacrificing her sanity to save her, and doing most of it alone. She rarely talked to her ex-husband about Amanda’s addiction; her current husband was patient and supportive, but sometimes, as Amanda's mother, Libby felt that the responsibility was mostly hers. So Libby had gone by herself to heroin awareness rallies at the state capitol. She had forced Amanda to take monthly drug tests and locked her out of the house. She had gone through the medical records Amanda left lying around and cursed out the doctors, pill mills and pharmacists who continued filling her prescriptions. She had tried, most of all, to be loving and patient with her daughter and to remember what so many experts had told her, that addiction was not a choice but a disease, even as Amanda stole her checks and then her credit cards, running up more than $50,000 of debt.</p>
-                          <p>And then, finally, nine years into her daughter’s addiction, Libby had come up with a plan to be done with all of it. She had put on a bathing suit beneath her beautician uniform one morning and driven out of the city toward Kensington Lake. She had been a competitive swimmer as a teenager, but now she was out of shape. If she could swim out for a mile or so, she would be too exhausted to make it back. Nobody would see her. Nobody would hear her. She sat at a picnic table and stared out at the water. She watched a family shove their canoe into the lake. She watched two kids throwing rocks. She sat for hours until the sun descended over the water and then she got back in her car and drove home, resolved to seek help. She met with a therapist, confided in her husband, consulted with a bankruptcy lawyer and started talking regularly with the mothers she’d met online.</p>
+                          <aside className="supplement-text callout">
+                              <div>
+                                  <img src={libby_bracelet} style={{width: "300px"}}/>
+                              </div>
+                              <p className="caption text-muted pt-2 m-0">Libby wears a bracelet she bought in a fundraiser by her Facebook group for mothers of addicts.</p>
+                          </aside>
+                          <p>And then, finally, nine years into her daughter’s addiction, Libby had come up with a plan to be done with all of it. She had put on a bathing suit beneath her beautician uniform one morning and driven out of the city toward Kensington Lake. She had been a competitive swimmer as a teenager, but now she was out of shape. If she could swim out for a mile or so, she would be too exhausted to make it back. Nobody would see her. Nobody would hear her. She sat at a picnic table and stared out at the water. She watched a family shove their canoe into the lake. She watched two kids throwing rocks. She sat for hours until the sun descended over the water and then she got back in her car and drove home, resolved to seek help. She met with a therapist, confided in her husband, consulted with a bankruptcy lawyer and started talking regularly with the mothers she’d&nbsp;met&nbsp;online.</p>
+                          <div className="pullquote">“See, that’s the part I’m no good at. I can’t let go. I always think I can&nbsp;save&nbsp;her.”</div>
                           <p>“If I cut the cord with Amanda, would she recover faster?” Libby asked them now. “Would it be easier on both of us?”</p>
                           <p>“There’s no one right way,” Mary said.</p>
                           <p>“I worry about enabling,” Libby said. “But what if I kick her out and she dies in some abandoned house? How do I live with myself?”</p>
@@ -122,20 +150,24 @@ class App extends Component {
                           <p>“I don’t know where to draw the line,” Libby said.</p>
                       </div>
                   </div>
+                  <BodyPicture img={amanda_dentist} caption="Amanda visits a dentist in Detroit while Libby watches nearby. All of Amanda's teeth needed to be pulled, and she is being fitted for dentures." />
                   <div className="row no-gutters">
-                      <div className="col-sm-8 offset-sm-2 col-lg-6">
-                          <p>"I need your pee,” Amanda was saying to her mother now, on the last day, just hours before her appointment for the shot. She had come upstairs with darkened eyes, a runny nose and a confession.</p>
+                      <div className={`${bodyCol}`}>
+                          <p className="dropcap">“I need your pee,” Amanda was saying to her mother now, on the last day, just hours before her appointment for the shot. She had come upstairs with darkened eyes, a runny nose and a confession.</p>
                           <p>“Excuse me? You need what?” Libby said.</p>
                           <p>“I need your pee. For the drug test. Otherwise I’m not going to pass and I can’t get the shot.”</p>
                           <p>“What are you even saying?” Libby said, and so Amanda began unwinding the lies she had been telling her mother for the past week. That day she jumped out of the car in Southwest Detroit and then disappeared for 12 minutes? She had been trying to find Sammy, but she had also been trying to buy heroin, and she hadn’t been able to find any. The appointment five days earlier that had been postponed at the last minute because of insurance? She had actually canceled it and then made a series of fake phone calls to confuse her mother. That night earlier in the week when she said she was going to sleep over with her twins? She had stayed with them for a while, played with them and taken them to a movie, but then she had found a babysitter and gone to a motel with a friend, where she had gotten high on $50 worth of methadone, a long-acting opiate that was still running through her body now.</p>
                           <p>It would be at least two weeks before the methadone was out of her system and she could pass a drug test. In two weeks, Amanda said, “I’ll probably be using and back out on the street.”</p>
                           <p>Libby started to shake her head and bite her nails, cursing under her breath. “It’s always the same with you, isn’t it?” she said.</p>
                           <p>“I need the shot now or I’ll never do it,” Amanda said. “I can deal with the sudden withdrawal.”</p>
+                          <div className="pullquote">“I don’t know where to draw the&nbsp;line”</div>
                           <p>“I can’t believe you’re even asking me to do this,” Libby said, but she had already decided that she would help Amanda, even if it required going to extremes. Withdrawal might send Amanda to the emergency room, but it was still safer than going back on heroin.</p>
                           <p>Libby went into the bathroom and came out carrying a small bottle, and they drove together to a clinic wedged between a liquor store and a pharmacy near the Detroit River. Amanda checked in at the main desk and then waited outside the front door, smoking a cigarette until a nurse came out to get her. “There are a few things we need to go over first,” the nurse said, leading her back to a small exam room.</p>
+                          <Supplement title="What is the NIH doing about it?"
+                                      text="The National Institutes of Health (NIH), a component of HHS, is the nation’s leading medical research agency helping solve the opioid crisis via discovering new and better ways to prevent opioid misuse, treat opioid use disorders, and manage pain. In the summer of 2017, NIH met with pharmaceutical companies and academic research centers to discuss: safe, effective, non-addictive strategies to manage chronic pain; new, innovative medications and technologies to treat opioid use disorders; and improved overdose prevention and reversal interventions to save lives and support recovery. In April 2018 at the National Rx Drug Abuse and Heroin Summit, NIH Director Francis S. Collins, M.D., Ph.D., announced the launch of the HEAL (Helping to End Addiction Long-term) Initiative, an aggressive, trans-agency effort to speed scientific solutions to stem the opioid public health crisis." />
                           <p>She explained that the shot was an opiate antagonist. She explained that if Amanda still had drugs in her body the shot would cause an immediate and severe reaction: muscle spasms, cold sweats, abdominal cramps, vomiting, diarrhea, fever, impaired breathing.</p>
                           <p>“When did you last have opiates in your system,” the nurse asked.</p>
-                          <p>“I’m not really sure,” Amanda said, looking down, picking at her nail beds.</p>
+                          <p>“I’m not really sure,” Amanda said, looking down, picking at her nail&nbsp;beds.</p>
                           <p>“Has it been over 14 days?”</p>
                           <p>“I think so.”</p>
                           <p>“No heroin? No Suboxone or methadone?”</p>
@@ -162,6 +194,15 @@ class App extends Component {
                           <p>The nurse walked away and then a few minutes later a doctor came out into the waiting room. He grabbed Amanda’s wheelchair and started rolling her back into triage. He told Amanda the hospital would take good care of her. He said she would be out of withdrawal and feeling better within three or four days. “Congratulations on Day One,” he said, but Amanda didn’t seem to hear him. Every nerve in her body was on fire. She was sick. She was clean. She was scared. She was feeling all of it now, so many sensations rushing in at once. “Please,” she said, reaching up for the doctor’s arm, tugging at it. “Make me feel nothing.”</p>
                       </div>
                   </div>
+                  <div className="row no-gutters w-100">
+                      <div className={`credit-container ${bodyCol} mt-3`}>
+                          <div className="credits">
+                              <div className="text-muted light-font pb-1 pt-2">Story by <strong className="text-primary bold-font">Eli Saslow</strong></div>
+                              <div className="text-muted light-font pb-1">Photos by <strong className="text-primary bold-font">Bonnie Jo Mount</strong></div>
+                              <div className="text-muted light-font pb-1"><small>Published on July 23, 2016</small></div>
+                          </div>
+                      </div>
+                  </div>
               </div>
           </section>
       </div>
@@ -169,4 +210,24 @@ class App extends Component {
   }
 }
 
+function Supplement(props) {
+    return <aside className="supplement-text callout">
+        <span className="callout-title">{props.title}</span>
+        <p className="m-0">{props.text}</p>
+        <small className="text-muted">source
+            <strong>
+                <a className="text-muted" href="https://www.drugabuse.gov/drugs-abuse/opioids/opioid-overdose-crisis"> NIH</a>
+            </strong>
+        </small>
+    </aside>
+}
+
+function BodyPicture(props) {
+    return <div className="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 mb-5 pt-2 divider">
+        <div>
+            <img className="img-responsive" src={props.img} />
+        </div>
+        <p className="caption text-muted pt-2">{props.caption}</p>
+    </div>
+}
 export default App;
