@@ -94,6 +94,7 @@ code {
   color: #715500;
   margin: 40px 0;
   hanging-punctuation: first;
+  text-indent: -0.7em;
 }
 
 .caption {
@@ -148,6 +149,7 @@ aside {
     float: none;
     width: 100%;
     text-align: left;
+    padding: 1rem;
   }
 
   .cover-overlay {
